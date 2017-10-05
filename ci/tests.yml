@@ -13,4 +13,3 @@ inputs:
 
 run:
   path: govau-ci-console/ci/test.sh
-  dir: govau-cg-dashboard
