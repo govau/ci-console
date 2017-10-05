@@ -4,8 +4,8 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: govau
-    tag: cga-cf-bosh-cli
+    repository: govau/cga-cf-bosh-cli
+    tag: latest
 
 inputs:
 - name: govau-cg-dashboard
