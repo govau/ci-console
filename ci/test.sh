@@ -29,4 +29,4 @@ glide install
 npm install
 
 # Run Go tests
-./codecheck.sh
+DOCKER_IN_DOCKER=1 ./codecheck.sh

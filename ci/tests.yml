@@ -15,5 +15,9 @@ caches:
 - path: govau-cg-dashboard/.npm_cache
 - path: govau-cg-dashboard/.glide_cache
 
+# We'll be a bit naughty and cache the following as well
+- path: govau-cg-dashboard/node_modules
+- path: govau-cg-dashboard/vendor
+
 run:
   path: govau-ci-console/ci/test.sh
