@@ -1,0 +1,24 @@
+---
+jobs:
+- name: deploy-to-z
+  serial: true
+  plan:
+  - aggregate:
+    - get: govau-ci-console
+      trigger: true
+    - get: govau-cg-dashboard
+      trigger: true
+  - task: run-tests
+    file: govau-ci-console/tests.yml
+
+resources:
+- name: govau-ci-console
+  type: git
+  source:
+    uri: https://github.com/govau/ci-console
+    branch: master
+- name:  govau-cg-dashboard
+  type: git
+  source:
+    uri: https://github.com/govau/cg-dashboard
+    branch: master
