@@ -28,5 +28,5 @@ glide install
 # Install Node deps
 npm install
 
-# Run Go tests
-DOCKER_IN_DOCKER=1 ./codecheck.sh
+# Run Go tests - skip Docker tests as we are not in privileged mode
+SKIP_DOCKER=1 ./codecheck.sh
