@@ -12,4 +12,5 @@ inputs:
 - name: govau-ci-console
 
 run:
-  path: govau-ci-console/build.sh
+  path: govau-ci-console/ci/test.sh
+  dir: govau-cg-dashboard

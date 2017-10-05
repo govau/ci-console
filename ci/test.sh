@@ -5,7 +5,7 @@ set -x
 
 # Symlink our source dir from inside of the GOPATH
 mkdir -p $GOPATH/src/github.com/18F
-ln -s $PWD/govau-cg-dashboard $GOPATH/src/github.com/18F/cg-dashboard
+ln -s $PWD $GOPATH/src/github.com/18F/cg-dashboard
 
 cd $GOPATH/src/github.com/18F/cg-dashboard
 ./codecheck.sh
