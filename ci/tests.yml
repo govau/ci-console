@@ -11,5 +11,9 @@ inputs:
 - name: govau-cg-dashboard
 - name: govau-ci-console
 
+caches:
+- path: govau-cg-dashboard/.npm_cache
+- path: govau-cg-dashboard/.glide_cache
+
 run:
   path: govau-ci-console/ci/test.sh
