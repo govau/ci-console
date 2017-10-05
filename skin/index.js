@@ -41,13 +41,10 @@ export const config = {
     disclaimer_link_text: "Here's how you know",
     disclaimer_reason_gov_header: "The .gov.au means it’s official.",
     disclaimer_reason_gov_body:
-      "Australian government websites often end in .gov.au. " +
-      "Before sharing sensitive information, make sure you're on a government site.",
+      "Australian government websites often end in .gov.au. Before sharing sensitive information, make sure you're on a government site.",
     disclaimer_reason_https_header: "The site is secure. ",
     disclaimer_reason_https_body:
-      "The https:// ensures that you are connecting to the " +
-      "official website and that any information you provide is encrypted and transmitted " +
-      "securely.",
+      "The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.",
     disclaimer: "An official website of the Australian government",
     show_flag: false,
     links: [
