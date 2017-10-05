@@ -21,4 +21,4 @@ resources:
   type: git
   source:
     uri: https://github.com/govau/cg-dashboard
-    branch: master
+    branch: z-cld
