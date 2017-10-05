@@ -9,7 +9,7 @@ image_resource:
 
 inputs:
 - name: govau-cg-dashboard
+- name: govau-ci-console
 
 run:
-  dir: govau-cg-dashboard
-  path: ./codecheck.sh
+  path: govau-ci-console/build.sh
