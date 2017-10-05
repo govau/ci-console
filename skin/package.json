@@ -1,0 +1,10 @@
+{
+  "name": "console-skin",
+  "version": "1.0.0",
+  "dependencies": {
+    "prettier": "^1.7.4"
+  },
+  "scripts": {
+    "prettier": "prettier --write \"package.json\" \"**/*.{js,json}\""
+  }
+}
