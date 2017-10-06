@@ -67,6 +67,7 @@ When building the frontend, be sure to set the skin environment variables:
 cd $CONSOLE_PATH
 npm install
 
+NODE_ENV="prod"
 SKIN_NAME="govau"
 SKIN_PROVIDES_TRANSLATIONS="true"
 
