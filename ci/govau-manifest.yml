@@ -1,0 +1,10 @@
+---
+buildpack: binary_buildpack
+memory: 256M
+services:
+- dashboard-ups
+env:
+  SECURE_COOKIES: true
+applications:
+- name: console
+command: cg-dashboard

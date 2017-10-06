@@ -11,6 +11,9 @@ inputs:
 - name: govau-cg-dashboard
 - name: govau-ci-console
 
+outputs:
+- name: govau-console
+
 caches:
 - path: govau-cg-dashboard/.npm_cache
 - path: govau-cg-dashboard/.glide_cache
