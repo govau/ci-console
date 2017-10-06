@@ -30,6 +30,7 @@ cd "${ORIG_PWD}/govau-ci-console/skin"
 yarn install
 
 # Symlink it into the dashboard dir
+mkdir -p ${ORIG_PWD}/govau-cg-dashboard/static/skins
 ln -s ${ORIG_PWD}/govau-ci-console/skin ${ORIG_PWD}/govau-cg-dashboard/static_src/skins/govau
 ln -s ${ORIG_PWD}/govau-ci-console/skin ${ORIG_PWD}/govau-cg-dashboard/static/skins/govau
 
