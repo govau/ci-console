@@ -44,7 +44,7 @@ yarn prettier
 
 ## Requirements
 
-- Node.js (version 6.x.x) - `cg-dashboard` requires this in order to install its dependencies.
+- Node.js (version 6.x.x) and `npm` (which ships with Node.js) - `cg-dashboard` requires this in order to install its dependencies.
 
 ## Set up
 
