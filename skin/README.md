@@ -61,13 +61,14 @@ cp -R govau/ci-console/skin/locales $CONSOLE_PATH/static/skins/govau/
 
 ## Build
 
-When building the frontend, set the skin environment variables:
+When building the frontend, be sure to set the skin environment variables:
 
 ```sh
+cd $CONSOLE_PATH
+npm install
+
 SKIN_NAME="govau"
 SKIN_PROVIDES_TRANSLATIONS="true"
 
-cd $CONSOLE_PATH
-npm install
 npm run build-prod
 ```
