@@ -65,6 +65,7 @@ When building the frontend, be sure to set the skin environment variables:
 
 ```sh
 cd $CONSOLE_PATH
+
 npm install
 
 NODE_ENV="prod"
