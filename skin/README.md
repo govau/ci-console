@@ -32,11 +32,13 @@ ln -s ~/go/src/github.com/govau/ci-console/skin/ ~/go/src/github.com/18f/cg-dash
 
 ## Prettier
 
+See [Prettier](https://github.com/prettier/prettier)'s docs for how to enable automatic formatting on save for your editor.
+
+If it's necessary to manually run prettier, you can use the package script:
+
 ```sh
 yarn prettier
 ```
-
-Alternatively, enable it in your editor to format on save.
 
 # Deployment
 
