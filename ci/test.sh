@@ -53,4 +53,5 @@ NODE_ENV="prod" SKIN_NAME="govau" SKIN_PROVIDES_TRANSLATIONS="true" npm run buil
 cp -R "${ORIG_PWD}/govau-cg-dashboard/static" "${ORIG_PWD}/govau-console/static"
 cp -R "${ORIG_PWD}/govau-cg-dashboard/templates" "${ORIG_PWD}/govau-console/templates"
 cp "${ORIG_PWD}/govau-cg-dashboard/cg-dashboard" "${ORIG_PWD}/govau-console/cg-dashboard"
+cp "${ORIG_PWD}/govau-ci-console/ci/govau-Procfile" "${ORIG_PWD}/govau-console/Procfile"
 cp "${ORIG_PWD}/govau-ci-console/ci/govau-manifest.yml" "${ORIG_PWD}/govau-console/manifest.yml"
