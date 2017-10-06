@@ -1,10 +1,10 @@
 Contains the skin files for cloud.gov.au's CloudFoundry console application.
 
-# Requirements
+# Development
+
+## Requirements
 
 - yarn (`npm install -g yarn`)
-
-# Development
 
 ## Set up
 
