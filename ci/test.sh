@@ -49,6 +49,10 @@ npm install
 # Build it
 NODE_ENV="prod" SKIN_NAME="govau" SKIN_PROVIDES_TRANSLATIONS="true" npm run build-prod
 
+# Copy locales
+mkdir -p ${ORIG_PWD}/govau-cg-dashboard/static/skins/govau
+cp -R ${ORIG_PWD}/govau-ci-console/skin/locales ${ORIG_PWD}/govau-cg-dashboard/static/skins/govau
+
 # Copy artefacts to output directory
 cp -R "${ORIG_PWD}/govau-cg-dashboard/static" "${ORIG_PWD}/govau-console/static"
 cp -R "${ORIG_PWD}/govau-cg-dashboard/templates" "${ORIG_PWD}/govau-console/templates"
