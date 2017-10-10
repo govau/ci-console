@@ -24,7 +24,7 @@ export const config = {
     disclaimer: <span>An Australia government platform</span>,
     links: [
       {
-        text: "cloud.gov.au home",
+        text: "cloud.gov.au",
         url: "https://cloud.gov.au"
       },
       {
