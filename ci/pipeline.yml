@@ -1,6 +1,6 @@
 ---
 jobs:
-- name: deploy-to-z
+- name: test-and-deploy
   serial: true
   plan:
   - aggregate:
@@ -11,16 +11,30 @@ jobs:
   - task: run-tests
     file: govau-ci-console/ci/tests.yml
   - aggregate:
-    - put: g-cld-console
-      params:
-        manifest: govau-console/manifest.yml
-        path: govau-console
-        current_app_name: console
-    - put: z-cld-console
-      params:
-        manifest: govau-console/manifest.yml
-        path: govau-console
-        current_app_name: console
+    - do:
+      - task: prepare-manifest
+        file: govau-ci-console/ci/prepare-manifest.yml
+        input_mapping: {build: govau-console}
+        output_mapping: {result: govau-console-g-cld}
+        params:
+          DOMAIN: system.g.cld.gov.au
+      - put: g-cld-console
+        params:
+          manifest: govau-console-g-cld/manifest.yml
+          path: govau-console
+          current_app_name: console
+    - do:
+      - task: prepare-manifest
+        file: govau-ci-console/ci/prepare-manifest.yml
+        input_mapping: {build: govau-console}
+        output_mapping: {result: govau-console-z-cld}
+        params:
+          DOMAIN: system.z.cld.gov.au
+      - put: z-cld-console
+        params:
+          manifest: govau-console-z-cld/manifest.yml
+          path: govau-console
+          current_app_name: console
 
 resources:
 - name: govau-ci-console
