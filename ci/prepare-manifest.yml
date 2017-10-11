@@ -14,7 +14,7 @@ outputs:
 - name: result
 
 params:
-- DOMAIN
+  DOMAIN:
 
 run:
   path: govau-ci-console/ci/prepare-manifest.sh

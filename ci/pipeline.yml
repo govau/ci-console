@@ -15,24 +15,24 @@ jobs:
       - task: prepare-manifest
         file: govau-ci-console/ci/prepare-manifest.yml
         input_mapping: {build: govau-console}
-        output_mapping: {result: govau-console-g-cld}
+        output_mapping: {result: govau-manifest-g-cld}
         params:
           DOMAIN: system.g.cld.gov.au
       - put: g-cld-console
         params:
-          manifest: govau-console-g-cld/manifest.yml
+          manifest: govau-manifest-g-cld/manifest.yml
           path: govau-console
           current_app_name: console
     - do:
       - task: prepare-manifest
         file: govau-ci-console/ci/prepare-manifest.yml
         input_mapping: {build: govau-console}
-        output_mapping: {result: govau-console-z-cld}
+        output_mapping: {result: govau-manifest-z-cld}
         params:
           DOMAIN: system.z.cld.gov.au
       - put: z-cld-console
         params:
-          manifest: govau-console-z-cld/manifest.yml
+          manifest: govau-manifest-z-cld/manifest.yml
           path: govau-console
           current_app_name: console
 
