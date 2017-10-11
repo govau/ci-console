@@ -2,8 +2,9 @@
 buildpack: binary_buildpack
 memory: 256M
 services:
-- dashboard-ups
+- console-ups
 env:
   SECURE_COOKIES: true
+  UPS_NAME: console-ups
 applications:
 - name: console
