@@ -8,20 +8,20 @@ image_resource:
     tag: latest
 
 inputs:
-- name: govau-cg-dashboard
-- name: govau-ci-console
+- name: src
+- name: ci
 
 outputs:
-- name: govau-console
+- name: build
 
 caches:
-- path: govau-cg-dashboard/.npm_cache
-- path: govau-cg-dashboard/.glide_cache
-- path: govau-ci-console/skin/.yarn_cache
+- path: src/.npm_cache
+- path: src/.glide_cache
+- path: ci/skin/.yarn_cache
 
 # We'll be a bit naughty and cache the following as well
-- path: govau-cg-dashboard/node_modules
-- path: govau-ci-console/skin/node_modules
+- path: src/node_modules
+- path: ci/skin/node_modules
 
 run:
-  path: govau-ci-console/ci/test.sh
+  path: ci/ci/test.sh

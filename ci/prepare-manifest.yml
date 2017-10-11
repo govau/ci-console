@@ -8,6 +8,7 @@ image_resource:
     tag: latest
 
 inputs:
+- name: ci
 - name: build
 
 outputs:
@@ -17,4 +18,4 @@ params:
   DOMAIN:
 
 run:
-  path: govau-ci-console/ci/prepare-manifest.sh
+  path: ci/ci/prepare-manifest.sh
