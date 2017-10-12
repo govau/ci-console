@@ -3,6 +3,8 @@ import React from "react";
 import * as homePage from "./components/HomePage";
 export { homePage };
 
+export { default as header } from "./header";
+
 import InfoLogs from "dashboard/components/info_logs.jsx";
 
 export const lang = "en-AU";
