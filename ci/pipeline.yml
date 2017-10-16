@@ -14,12 +14,45 @@ jobs:
     - do:
       - task: prepare-manifest
         file: ci/ci/prepare-manifest.yml
+        output_mapping: {result: b-manifest}
+        params:
+          DOMAIN: system.b.cld.gov.au
+      - put: b-cf
+        params:
+          manifest: b-manifest/manifest.yml
+          path: build
+          current_app_name: console
+    - do:
+      - task: prepare-manifest
+        file: ci/ci/prepare-manifest.yml
+        output_mapping: {result: d-manifest}
+        params:
+          DOMAIN: system.d.cld.gov.au
+      - put: d-cf
+        params:
+          manifest: d-manifest/manifest.yml
+          path: build
+          current_app_name: console
+    - do:
+      - task: prepare-manifest
+        file: ci/ci/prepare-manifest.yml
         output_mapping: {result: g-manifest}
         params:
           DOMAIN: system.g.cld.gov.au
       - put: g-cf
         params:
           manifest: g-manifest/manifest.yml
+          path: build
+          current_app_name: console
+    - do:
+      - task: prepare-manifest
+        file: ci/ci/prepare-manifest.yml
+        output_mapping: {result: y-manifest}
+        params:
+          DOMAIN: system.y.cld.gov.au
+      - put: y-cf
+        params:
+          manifest: y-manifest/manifest.yml
           path: build
           current_app_name: console
     - do:
@@ -45,12 +78,36 @@ resources:
   source:
     uri: https://github.com/govau/cg-dashboard
     branch: z-cld
+- name: b-cf
+  type: cf
+  source:
+    api: https://api.system.b.cld.gov.au
+    username: ci-system-console
+    password: ((b-password))
+    organization: system
+    space: console
+- name: d-cf
+  type: cf
+  source:
+    api: https://api.system.d.cld.gov.au
+    username: ci-system-console
+    password: ((d-password))
+    organization: system
+    space: console
 - name: g-cf
   type: cf
   source:
     api: https://api.system.g.cld.gov.au
     username: ci-system-console
     password: ((g-password))
+    organization: system
+    space: console
+- name: y-cf
+  type: cf
+  source:
+    api: https://api.system.y.cld.gov.au
+    username: ci-system-console
+    password: ((y-password))
     organization: system
     space: console
 - name: z-cf
