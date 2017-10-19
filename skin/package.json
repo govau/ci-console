@@ -2,9 +2,12 @@
   "name": "console-skin",
   "version": "1.0.0",
   "dependencies": {
-    "prettier": "^1.7.4"
+    "prettier": "^1.7.4",
+    "react-scripts": "^1.0.14"
   },
   "scripts": {
-    "prettier": "prettier --write \"**/*.{js,json}\""
+    "prettier": "prettier --write \"**/*.{js,json}\"",
+    "prettier-check": "prettier --list-different \"**/*.{js,json}\"",
+    "test": "react-scripts test --env=jsdom"
   }
 }
