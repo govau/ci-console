@@ -2,8 +2,8 @@
 
 set -eu
 
+# Start in skin/
 cd "$(dirname "$0")/.."
-pwd
 
 yarn install
 
