@@ -1,3 +1,6 @@
+cache: yarn
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
-cache: yarn
+install:
+  - cd skin
+  - yarn install
