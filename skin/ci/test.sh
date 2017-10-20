@@ -2,8 +2,7 @@
 
 set -eu
 
-cd "$(dirname "$0")"
-echo "$(dirname "$0")"
+cd "$(dirname "$0")/.."
 pwd
 
 yarn install
