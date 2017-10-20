@@ -9,4 +9,4 @@ before_install:
 install:
   - cd skin
   - yarn install
-script: echo HELLO
+script: cd skin && yarn prettier
