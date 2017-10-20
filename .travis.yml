@@ -1,13 +1,16 @@
 language: node_js
 node_js:
-  - "8"
-  - "node"
-cache: yarn
+  - 8
+  - node
+cache:
+  yarn: true
+  directories:
+    - skin/node_modules
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH="$HOME/.yarn/bin:$PATH"
-install:
-  # Note: we're only testing skin.
-  - cd skin
-  - yarn install
-script: yarn prettier-check
+script:
+ - 'if [ $TEST_SUITE = "skin" ]; then skin/ci/test.sh; fi'
+env:
+  matrix:
+    - TEST_SUITE=skin
