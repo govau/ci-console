@@ -7,6 +7,7 @@ before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH="$HOME/.yarn/bin:$PATH"
 install:
+  # Note: we're only testing skin.
   - cd skin
   - yarn install
-script: cd skin && yarn prettier
+script: yarn prettier
