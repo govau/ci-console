@@ -5,6 +5,7 @@
     "prettier": "^1.7.4"
   },
   "scripts": {
-    "prettier": "prettier --write \"**/*.{js,json}\""
+    "prettier": "prettier --write \"**/*.{js,json}\"",
+    "prettier-check": "prettier --list-different \"**/*.{js,json}\""
   }
 }

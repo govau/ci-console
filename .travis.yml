@@ -10,4 +10,4 @@ install:
   # Note: we're only testing skin.
   - cd skin
   - yarn install
-script: yarn prettier
+script: yarn prettier-check
