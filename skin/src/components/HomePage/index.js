@@ -1,7 +1,7 @@
 import React from "react";
 
-import Panel from "dashboard/components/panel.jsx";
-import PanelGroup from "dashboard/components/panel_group.jsx";
+import Panel from "dashboard/components/panel";
+import PanelGroup from "dashboard/components/panel_group";
 import Features from "./Features";
 
 export const panels = [

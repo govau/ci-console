@@ -5,7 +5,7 @@ export { homePage };
 
 export { default as header } from "./header";
 
-import InfoLogs from "dashboard/components/info_logs.jsx";
+import InfoLogs from "dashboard/components/info_logs";
 
 export const lang = "en-AU";
 
