@@ -5,6 +5,6 @@ services:
 - console-ups
 env:
   SECURE_COOKIES: true
-  UPS_NAME: console-ups
+  UPS_NAMES: console-ups
 applications:
 - name: console
