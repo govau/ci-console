@@ -33,7 +33,8 @@ jobs:
           params:
             manifest: g-manifest/manifest.yml
             path: build
-            current_app_name: console
+            # commenting out to stop zero-downtime-push, which eats our logs
+            #current_app_name: console
     on_success:
       put: slack
       params:
