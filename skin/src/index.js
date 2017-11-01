@@ -86,8 +86,8 @@ export const config = {
     name: "cloud.gov.au",
     api_host: "api.system.g.cld.gov.au",
     logs: {
-      name: "logs.system.g.cld.gov.au",
-      url: "https://logs.system.g.cld.gov.au"
+      name: "logs.g.cld.gov.au",
+      url: "https://logs.g.cld.gov.au"
     }
   }
 };
