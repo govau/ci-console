@@ -55,7 +55,7 @@ cp -R ${ORIG_PWD}/ci/skin/locales ${ORIG_PWD}/src/static/skins/govau
 
 # Copy artefacts to output directory
 cp -R "${ORIG_PWD}/src/static" "${ORIG_PWD}/build/static"
-cp -R "${ORIG_PWD}/src/templates" "${ORIG_PWD}/build/templates"
+cp -R "${ORIG_PWD}/ci/skin/templates" "${ORIG_PWD}/build/templates"
 cp "${ORIG_PWD}/src/cg-dashboard" "${ORIG_PWD}/build/cg-dashboard"
 cp "${ORIG_PWD}/ci/ci/govau-Procfile" "${ORIG_PWD}/build/Procfile"
 cp "${ORIG_PWD}/ci/ci/govau-manifest.yml" "${ORIG_PWD}/build/manifest-template.yml"
