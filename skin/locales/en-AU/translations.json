@@ -1,8 +1,33 @@
 {
   "Organization": "Organisation",
+  "Organizations": "Organisations",
   "Your organizations": "Your organisations",
+  "Loading organizations": "Loading organisations",
+  "No organizations": "No organisations",
+  "Organization overview": "Organisation overview",
+  "Organization users": "Organisation users",
+  "You have no spaces in this organization.":
+    "You have no spaces in this organisation.",
+  "You don’t have permission to see the spaces in this organization.":
+    "You don’t have permission to see the spaces in this organisation.",
+  "Organization auditors and billing managers can’t view spaces. Ask your organization’s administrator to give you these permissions.":
+    "Organisation auditors and billing managers can’t view spaces. Ask your organisation’s administrator to give you these permissions.",
   "We can’t find any of your organizations.":
     "We can’t find any of your organisations.",
   "If you just joined, your organization may not yet be ready. Sometimes organizations can take up to 20 minutes to appear on your first login.":
-    "If you just joined, your organisation may not yet be ready. Sometimes organisations can take up to 20 minutes to appear on your first login."
+    "If you just joined, your organisation may not yet be ready. Sometimes organisations can take up to 20 minutes to appear on your first login.",
+  "Only an Org Manager can new invite users to this organization via the dashboard. Speak to your Org Manager if you need to add a user to this organization.":
+    "Only an Org Manager can new invite users to this organisation via the dashboard. Speak to your Org Manager if you need to add a user to this organisation.",
+  "As a Space Manager, you can invite existing organization users into your space. If you wish to invite a person who is not in the organization into your space, please ask an Org Manager.":
+    "As a Space Manager, you can invite existing organisation users into your space. If you wish to invite a person who is not in the organisation into your space, please ask an Org Manager.",
+  "There are no users in this organization":
+    "There are no users in this organisation",
+  "Organization Managers can change these roles.":
+    "Organisation Managers can change these roles.",
+  "Removing all roles does not remove a user from an organization. Users with no roles can view other users and their roles while being unable to make any changes.":
+    "Removing all roles does not remove a user from an organisation. Users with no roles can view other users and their roles while being unable to make any changes.",
+  "There was an issue connecting to the dashboard, organization data may be incomplete":
+    "There was an issue connecting to the console, organisation data may be incomplete",
+  "There was an issue connecting to the dashboard, unable to fetch organizations":
+    "There was an issue connecting to the console, unable to fetch organisations"
 }
