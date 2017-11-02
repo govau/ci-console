@@ -73,8 +73,8 @@ export const config = {
     roles:
       "https://cloud.gov/docs/apps/managing-teammates/#give-roles-to-a-teammate",
     managed_services: "https://cloud.gov/docs/apps/managed-services/",
-    status: "https://cloudgov.statuspage.io/",
-    contact: "https://cloud.gov/docs/help/"
+    status: "",
+    contact: "https://support.cloud.gov.au/"
   },
   snippets: {
     logs: InfoLogs
