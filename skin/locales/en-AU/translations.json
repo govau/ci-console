@@ -29,5 +29,9 @@
   "There was an issue connecting to the dashboard, organization data may be incomplete":
     "There was an issue connecting to the console, organisation data may be incomplete",
   "There was an issue connecting to the dashboard, unable to fetch organizations":
-    "There was an issue connecting to the console, unable to fetch organisations"
+    "There was an issue connecting to the console, unable to fetch organisations",
+  "Invite an existing organization user to this space.":
+    "Invite an existing organisation user to this space.",
+  "Invite an existing organization user to this organization.":
+    "Invite an existing organisation user to this organization."
 }
