@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-react-require": "^3.0.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "declassify": "^2.0.0",
+    "eslint": "^4.9.0",
+    "eslint-plugin-react": "^7.4.0",
+    "juice": "^4.2.0",
+    "prettier": "^1.7.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "^1.0.14",
+    "react-test-renderer": "^16.0.0",
+    "rxjs": "^5.4.3",
+    "styled-components": "^2.2.1"
+  },
+  "scripts": {
+    "build": "babel-node gen/",
+    "test": "react-scripts test --env=jsdom"
+  }
+}
