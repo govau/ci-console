@@ -16,8 +16,8 @@
     "We can’t find any of your organisations.",
   "If you just joined, your organization may not yet be ready. Sometimes organizations can take up to 20 minutes to appear on your first login.":
     "If you just joined, your organisation may not yet be ready. Sometimes organisations can take up to 20 minutes to appear on your first login.",
-  "Only an Org Manager can new invite users to this organization via the dashboard. Speak to your Org Manager if you need to add a user to this organization.":
-    "Only an Org Manager can new invite users to this organisation via the console. Speak to your Org Manager if you need to add a user to this organisation.",
+  "Only an Org Manager can invite new users to this organization via the dashboard. Speak to your Org Manager if you need to add a user to this organization.":
+    "Only an Org Manager can invite new users to this organisation via the console. Speak to your Org Manager if you need to add a user to this organisation.",
   "As a Space Manager, you can invite existing organization users into your space. If you wish to invite a person who is not in the organization into your space, please ask an Org Manager.":
     "As a Space Manager, you can invite existing organisation users into your space. If you wish to invite a person who is not in the organisation into your space, please ask an Org Manager.",
   "There are no users in this organization":
@@ -33,5 +33,8 @@
   "Invite an existing organization user to this space.":
     "Invite an existing organisation user to this space.",
   "Invite an existing organization user to this organization.":
-    "Invite an existing organisation user to this organization."
+    "Invite an existing organisation user to this organization.",
+  "Invite a new or existing user to this organization.":
+    "Invite a new or existing user to this organisation.",
+  "Add user to this organization": "Add user to this organisation"
 }

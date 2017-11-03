@@ -11,10 +11,10 @@ export const lang = "en-AU";
 
 export const config = {
   header: {
-    disclaimer_link_text: "Here's how you know",
+    disclaimer_link_text: "Here’s how you know",
     disclaimer_reason_gov_header: "The .gov.au means it’s official.",
     disclaimer_reason_gov_body:
-      "Australian Government websites often end in .gov.au. Before sharing sensitive information, make sure you're on a government site.",
+      "Australian Government websites often end in .gov.au. Before sharing sensitive information, make sure you’re on a government site.",
     disclaimer_reason_https_header: "The site is secure. ",
     disclaimer_reason_https_body:
       "The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.",
@@ -64,10 +64,11 @@ export const config = {
     ]
   },
   docs: {
-    cli: "https://cloud.gov/docs/getting-started/setup/",
+    cli: "https://docs.cloud.gov.au/getting_started/install_cli/",
     concepts_roles: "https://docs.cloudfoundry.org/concepts/roles.html",
     concepts_spaces: "https://cloud.gov/docs/getting-started/concepts/",
-    deploying_apps: "https://cloud.gov/docs/getting-started/your-first-deploy/",
+    deploying_apps:
+      "https://docs.cloud.gov.au/deployment_configuration/application_deployment/",
     use: "https://cloud.gov/overview/overview/using-cloudgov-paas/",
     invite_user:
       "https://docs.cloud.gov.au/deployment_configuration/user_management/",
