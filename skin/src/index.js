@@ -69,9 +69,10 @@ export const config = {
     concepts_spaces: "https://cloud.gov/docs/getting-started/concepts/",
     deploying_apps: "https://cloud.gov/docs/getting-started/your-first-deploy/",
     use: "https://cloud.gov/overview/overview/using-cloudgov-paas/",
-    invite_user: "https://cloud.gov/docs/apps/managing-teammates/",
+    invite_user:
+      "https://docs.cloud.gov.au/deployment_configuration/user_management/",
     roles:
-      "https://cloud.gov/docs/apps/managing-teammates/#give-roles-to-a-teammate",
+      "https://docs.cloud.gov.au/deployment_configuration/user_management/",
     managed_services: "https://cloud.gov/docs/apps/managed-services/",
     status: "",
     contact: "https://support.cloud.gov.au/"
