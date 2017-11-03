@@ -53,6 +53,11 @@ NODE_ENV="prod" SKIN_NAME="govau" SKIN_PROVIDES_TRANSLATIONS="true" npm run buil
 mkdir -p ${ORIG_PWD}/src/static/skins/govau
 cp -R ${ORIG_PWD}/ci/skin/locales ${ORIG_PWD}/src/static/skins/govau
 
+# Build email templates
+cd ${ORIG_PWD}/ci/skin/email-templates
+yarn install
+yarn build
+
 # Copy artefacts to output directory
 cp -R "${ORIG_PWD}/src/static" "${ORIG_PWD}/build/static"
 cp -R "${ORIG_PWD}/ci/skin/templates" "${ORIG_PWD}/build/templates"
