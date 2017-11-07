@@ -21,6 +21,8 @@
   },
   "scripts": {
     "build": "babel-node gen/",
+    "format": "prettier --write \"**/*.{js,json}\"",
+    "format-check": "prettier --list-different \"**/*.{js,json}\"",
     "lint": "eslint src/ gen/",
     "test": "react-scripts test --env=jsdom"
   }
