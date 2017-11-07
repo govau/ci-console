@@ -3,9 +3,13 @@
   "version": "",
   "private": true,
   "dependencies": {
-    "prettier": "1.7.4"
+    "prettier": "1.8.0",
+    "react-scripts": "^1.0.17"
   },
   "scripts": {
-    "format": "prettier --write \"**/*.{js,json}\""
+    "format": "prettier --write \"**/*.{js,json}\"",
+    "format-check": "prettier --list-different \"**/*.{js,json}\"",
+    "lint": "eslint src/",
+    "test": "react-scripts test --env=jsdom"
   }
 }
