@@ -56,7 +56,6 @@ cp -R ${ORIG_PWD}/ci/skin/locales ${ORIG_PWD}/src/static/skins/govau
 # Build email templates
 cd ${ORIG_PWD}/ci/skin/email-templates
 yarn install
-yarn test
 yarn build
 
 # Copy artefacts to output directory
