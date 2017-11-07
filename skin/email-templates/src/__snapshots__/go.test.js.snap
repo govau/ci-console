@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`If › renders without crashing 1`] = `
+<div>
+  {{if .field}}
+  <div>
+    children
+  </div>
+  {{end}}
+</div>
+`;
+
+exports[`Range › renders without crashing 1`] = `
+<div>
+  {{range $i, $w := .widgets}}
+  <div>
+    children
+  </div>
+  {{end}}
+</div>
+`;
+
+exports[`ValueC › renders without crashing 1`] = `
+<span>
+  {{.field}}
+</span>
+`;

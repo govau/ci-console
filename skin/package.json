@@ -1,8 +1,9 @@
 {
   "name": "console-skin",
-  "version": "1.0.0",
+  "version": "",
+  "private": true,
   "dependencies": {
-    "prettier": "^1.7.4"
+    "prettier": "1.7.4"
   },
   "scripts": {
     "format": "prettier --write \"**/*.{js,json}\""

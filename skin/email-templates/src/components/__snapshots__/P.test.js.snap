@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+.c0 {
+  margin: 10px 0;
+  padding: 0;
+  mso-line-height-rule: exactly;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: left;
+}
+
+<p
+  className="c0"
+>
+  content
+</p>
+`;

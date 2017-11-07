@@ -14,10 +14,21 @@ const renderComponentToFile = (subject, htmlComp, text, dir) => {
       <StyleSheetManager sheet={sheet.instance}>{htmlComp}</StyleSheetManager>
     );
 
-    const styleTags = sheet.getStyleTags();
+    const globalStyles = renderToString(
+      sheet
+        .getStyleElement()
+        .filter(e => e.props["data-styled-components-is-local"] === "false")
+    );
+    const localStyles = sheet
+      .getStyleElement()
+      .filter(e => e.props["data-styled-components-is-local"] === "true")
+      .map(e => renderToString(e))
+      .join("\n");
 
     const htmlOut = declassify.process(
-      juice(`<!doctype html>${html.replace("/* style-tags */", styleTags)}`)
+      juice(`<!doctype html>${html.replace("/* style-tags */", localStyles)}`, {
+        applyAttributesTableElements: false
+      }).replace("/* global-style-tags */", globalStyles)
     );
 
     mkdirp(dir, {}, err1 => {

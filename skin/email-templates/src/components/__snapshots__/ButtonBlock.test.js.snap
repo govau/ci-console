@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+.c1 {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+.c0 {
+  min-width: 100%;
+  border-collapse: collapse;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.c2 {
+  padding-top: 0;
+  padding-right: 18px;
+  padding-bottom: 18px;
+  padding-left: 18px;
+  mso-line-height-rule: exactly;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.c3 {
+  border-collapse: separate;
+  border-radius: 3px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background-color: #ffcc00;
+}
+
+.c4 {
+  font-size: 16px;
+  padding: 15px;
+  mso-line-height-rule: exactly;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: Roboto;
+}
+
+.c5 {
+  font-weight: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-height: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  mso-line-height-rule: exactly;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  display: block;
+}
+
+<table
+  border="0"
+  cellPadding="0"
+  cellSpacing="0"
+  className="c0 c1"
+  width="100%"
+>
+  <tbody>
+    <tr>
+      <td
+        align="center"
+        className="c2"
+        valign="top"
+      >
+        <table
+          border="0"
+          cellPadding="0"
+          cellSpacing="0"
+          className="c3 c1"
+        >
+          <tbody>
+            <tr>
+              <td
+                align="center"
+                className="c4"
+                valign="middle"
+              >
+                <a
+                  className="c5 "
+                  href="https://example.com"
+                >
+                  content
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

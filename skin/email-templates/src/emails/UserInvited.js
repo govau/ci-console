@@ -1,18 +1,80 @@
 import React from "react";
 
+import {
+  A,
+  Br,
+  P,
+  Strong,
+  ButtonBlock,
+  TextBlock,
+  Unlink
+} from "../components";
 import { Value } from "../go";
 
 export const subject = "Invitation to join cloud.gov.au";
 
-export const previewText = `TODO`;
+export const previewText =
+  "You have been invited to join cloud.gov.au - a service by the DTA that helps government teams create and deliver quality digital services securely hosted in the cloud.";
+
+const supportEmail = "support@cloud.gov.au";
 
 const HTML = () => {
-  return <div>TODO: {Value(".URL")}</div>;
+  return (
+    <div>
+      <TextBlock>
+        <P>
+          Hello, you have been invited to join <Unlink>cloud.gov.au</Unlink>.
+        </P>
+      </TextBlock>
+      <ButtonBlock href={Value(".URL")}>Accept your invitation</ButtonBlock>
+      <TextBlock>
+        <P>
+          <A href="https://cloud.gov.au">cloud.gov.au</A> is a service by the
+          DTA that helps government teams create and deliver quality digital
+          services securely hosted in the cloud.
+        </P>
+        <P>
+          <Strong>Accept the invitation</Strong> -{" "}
+          <A href={Value(".URL")}>Accept your invite [1]</A> to continue the
+          registration process. You can also copy the URL below and paste it
+          into your browser's address bar:
+        </P>
+        <P>
+          <A href={Value(".URL")}>{Value(".URL")}</A>
+        </P>
+        <P>
+          <Strong>Read the documentation</Strong> - After you{" "}
+          <A href="{{.URL}}">register [2]</A> and{" "}
+          <A href="https://console.cloud.gov.au/">log in [3]</A>, review the{" "}
+          <A href="https://docs.cloud.gov.au">
+            read the cloud.gov.au docs [4]
+          </A>.
+        </P>
+        <P>
+          Then{" "}
+          <A href="https://docs.cloud.gov.au/getting_started/login/">
+            set up your cloud.gov.au access and get started [5]
+          </A>.
+        </P>
+        <P>
+          If you run into problems or have any questions, please email us at{" "}
+          <A href={`mailto:${supportEmail}`}>{supportEmail}</A>.
+        </P>
+      </TextBlock>
+      <TextBlock>
+        <P>
+          Thank you,
+          <Br />
+          The <Unlink>cloud.gov.au</Unlink> team
+        </P>
+      </TextBlock>
+    </div>
+  );
 };
 
 export default HTML;
 
-export const text = `You have been invited to join cloud.gov.au
+export const text = `Hello, you have been invited to join cloud.gov.au
 
 cloud.gov.au is a service by the DTA that helps government teams
 create and deliver quality digital services securely hosted in the

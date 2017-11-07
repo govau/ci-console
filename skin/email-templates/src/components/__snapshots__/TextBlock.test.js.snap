@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+.c1 {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+.c0 {
+  min-width: 100%;
+  border-collapse: collapse;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.c2 {
+  padding-top: 9px;
+  mso-line-height-rule: exactly;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.c3 {
+  max-width: 100%;
+  min-width: 100%;
+  border-collapse: collapse;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.c4 {
+  padding-top: 0;
+  padding-right: 18px;
+  padding-bottom: 9px;
+  padding-left: 18px;
+  mso-line-height-rule: exactly;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-word;
+  font-family: Helvetica;
+  line-height: 150%;
+  text-align: left;
+  font-size: 16px;
+}
+
+<table
+  border="0"
+  cellPadding="0"
+  cellSpacing="0"
+  className="c0 c1"
+  width="100%"
+>
+  <tbody>
+    <tr>
+      <td
+        className="c2"
+        valign="top"
+      >
+        <table
+          align="left"
+          border="0"
+          cellPadding="0"
+          cellSpacing="0"
+          className="c3 c1"
+          width="100%"
+        >
+          <tbody>
+            <tr>
+              <td
+                align="left"
+                className="c4"
+                color={undefined}
+                fontSize={16}
+                valign="top"
+              >
+                content
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
