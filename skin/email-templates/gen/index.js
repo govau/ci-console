@@ -4,8 +4,7 @@ import { injectGlobalStyles } from "../src/components/Email";
 
 injectGlobalStyles();
 
-Rx.Observable
-  .from(["./emails/userInvited"])
+Rx.Observable.from(["./emails/userInvited"])
   .map(modPath => require(modPath).default)
   .flatMap(fn => fn())
   .subscribe({

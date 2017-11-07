@@ -46,9 +46,7 @@ const HTML = () => {
           <Strong>Read the documentation</Strong> - After you{" "}
           <A href="{{.URL}}">register [2]</A> and{" "}
           <A href="https://console.cloud.gov.au/">log in [3]</A>, review the{" "}
-          <A href="https://docs.cloud.gov.au">
-            read the cloud.gov.au docs [4]
-          </A>.
+          <A href="https://docs.cloud.gov.au">read the cloud.gov.au docs [4]</A>.
         </P>
         <P>
           Then{" "}
