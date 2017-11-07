@@ -4,7 +4,8 @@ Contains the skin files for cloud.gov.au's CloudFoundry console application.
 
 ## Requirements
 
-- yarn (see [installation instructions](https://yarnpkg.com/lang/en/docs/install/))
+* yarn (see [installation
+  instructions](https://yarnpkg.com/lang/en/docs/install/))
 
 ## Set up
 
@@ -32,7 +33,8 @@ ln -s ~/go/src/github.com/govau/ci-console/skin/ ~/go/src/github.com/18f/cg-dash
 
 ## Prettier
 
-See [Prettier](https://github.com/prettier/prettier)'s docs for how to enable automatic formatting on save for your editor.
+See [Prettier](https://github.com/prettier/prettier)'s docs for how to enable
+automatic formatting on save for your editor.
 
 If it's necessary to manually format, you can use the package script:
 
@@ -44,7 +46,8 @@ yarn format
 
 ## Requirements
 
-- Node.js (version 8.x.x) and `npm` (which ships with Node.js) - `cg-dashboard` requires this in order to install its dependencies.
+* Node.js (version 8.x.x) and `npm` (which ships with Node.js) - `cg-dashboard`
+  requires this in order to install its dependencies.
 
 ## Set up
 
