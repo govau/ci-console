@@ -40,8 +40,6 @@ const disclaimer = {
   }
 };
 
-const buildLogoSrc = () => `/assets/${logoSrc}#logo-dashboard`;
-
 const logo = {
   render: () => (
     <div className="header-title" style={{ marginTop: "-0.45rem" }}>

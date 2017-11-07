@@ -1,11 +1,10 @@
 import React from "react";
+import InfoLogs from "dashboard/components/info_logs";
 
 import * as homePage from "./components/HomePage";
 export { homePage };
 
 export { default as header } from "./header";
-
-import InfoLogs from "dashboard/components/info_logs";
 
 export const lang = "en-AU";
 
