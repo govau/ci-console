@@ -3,6 +3,8 @@ import React from "react";
 import {
   A,
   Br,
+  H1,
+  Hr,
   P,
   Strong,
   ButtonBlock,
@@ -22,10 +24,15 @@ const HTML = () => {
   return (
     <div>
       <TextBlock>
-        <P>
-          Hello, you have been invited to join <Unlink>cloud.gov.au</Unlink>.
+        <H1 align="center">
+          Invitation to join <Unlink>cloud.gov.au</Unlink>
+        </H1>
+        <P align="center">
+          <Unlink>{Value(".Email")}</Unlink>, you have been invited to join{" "}
+          <Unlink>cloud.gov.au</Unlink>
         </P>
       </TextBlock>
+      <Hr />
       <ButtonBlock href={Value(".URL")}>Accept your invitation</ButtonBlock>
       <TextBlock>
         <P>
@@ -72,7 +79,9 @@ const HTML = () => {
 
 export default HTML;
 
-export const text = `Hello, you have been invited to join cloud.gov.au
+export const text = `${Value(
+  ".Email"
+)}, you have been invited to join cloud.gov.au
 
 cloud.gov.au is a service by the DTA that helps government teams
 create and deliver quality digital services securely hosted in the

@@ -2,12 +2,12 @@
 
 exports[`renders without crashing 1`] = `
 .c0 {
-  color: #ffcc00;
+  margin: 20px 0 40px 0;
+  border-top: 0;
+  border-color: #f0f0f0;
 }
 
-<a
+<hr
   className="c0"
->
-  www.example.com
-</a>
+/>
 `;

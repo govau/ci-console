@@ -1,5 +1,7 @@
 export { default as A } from "./A";
 export { default as Br } from "./Br";
+export { default as H1 } from "./H1";
+export { default as Hr } from "./Hr";
 export { default as P } from "./P";
 export { default as Strong } from "./Strong";
 export { default as ButtonBlock } from "./ButtonBlock";
