@@ -44,7 +44,7 @@ const HTML = () => {
           <Strong>Accept the invitation</Strong> -{" "}
           <A href={Value(".URL")}>Accept your invite [1]</A> to continue the
           registration process. You can also copy the URL below and paste it
-          into your browser's address bar:
+          into your browser’s address bar:
         </P>
         <P>
           <A href={Value(".URL")}>{Value(".URL")}</A>
@@ -89,7 +89,7 @@ cloud.
 
 Accept the invitation - Accept your invite [1] to continue the
 registration process. You can also copy the URL below and paste it
-into your browser's address bar:
+into your browser’s address bar:
 
 {{.URL}}
 
@@ -104,7 +104,7 @@ support@cloud.gov.au.
 Thank you,
 The cloud.gov.au team
 
-Need help [6]? We'd love to hear from you.
+Need help [6]? We’d love to hear from you.
 
 [1] Accept your invite: {{.URL}}
 [2] Register: {{.URL}}
