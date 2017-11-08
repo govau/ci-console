@@ -47,6 +47,8 @@ npm config set cache "${NPM_CACHE}"
 npm install
 
 # Build it
+echo "NAME: $NAME\n"
+
 NODE_ENV="prod" SKIN_NAME="govau" SKIN_PROVIDES_TRANSLATIONS="true" npm run build-prod
 
 # Copy locales
