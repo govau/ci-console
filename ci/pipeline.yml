@@ -17,7 +17,6 @@ jobs:
           file: ci/ci/prepare-manifest.yml
           output_mapping: {result: d-manifest}
           params:
-            NAME: d-cld
             DOMAIN: system.d.cld.gov.au
         - put: d-cf
           params:
@@ -30,7 +29,6 @@ jobs:
           file: ci/ci/prepare-manifest.yml
           output_mapping: {result: g-manifest}
           params:
-            NAME: g-cld
             DOMAIN: system.g.cld.gov.au
         - put: g-cf
           params:
