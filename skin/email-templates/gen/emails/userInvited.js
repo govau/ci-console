@@ -7,8 +7,8 @@ import renderComponentToFile from "../renderComponentToFile";
 
 const distPath = "userInvited";
 
-const renderToFile = () => {
-  return renderComponentToFile(
+const renderToFile = () =>
+  renderComponentToFile(
     subject,
     <Email subject={subject} previewText={previewText}>
       <HTML />
@@ -16,6 +16,5 @@ const renderToFile = () => {
     text,
     resolve(__dirname, `../../../templates/mail/${distPath}`)
   );
-};
 
 export default renderToFile;
