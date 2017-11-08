@@ -1,6 +1,7 @@
 ---
 jobs:
-- name: console-dg
+
+- name: console-d
   serial: true
   plan:
   - do:
@@ -9,33 +10,17 @@ jobs:
         trigger: true
       - get: src
         trigger: true
-    - task: run-tests
-      file: ci/ci/tests.yml
-    - aggregate:
-      - do:
-        - task: prepare-manifest
-          file: ci/ci/prepare-manifest.yml
-          output_mapping: {result: d-manifest}
-          params:
-            DOMAIN: system.d.cld.gov.au
-        - put: d-cf
-          params:
-            manifest: d-manifest/manifest.yml
-            path: build
-            current_app_name: console
-            show_app_log: true
-      - do:
-        - task: prepare-manifest
-          file: ci/ci/prepare-manifest.yml
-          output_mapping: {result: g-manifest}
-          params:
-            DOMAIN: system.g.cld.gov.au
-        - put: g-cf
-          params:
-            manifest: g-manifest/manifest.yml
-            path: build
-            current_app_name: console
-            show_app_log: true
+    - task: build
+      file: ci/ci/build.yml
+      output_mapping: {build: d-build}
+      params:
+        ENV_DOMAIN: d.cld.gov.au
+    - put: d-cf
+      params:
+        manifest: d-build/manifest.yml
+        path: d-build
+        current_app_name: console
+        show_app_log: true
     on_success:
       put: slack
       params:
@@ -49,42 +34,92 @@ jobs:
           :x: $BUILD_JOB_NAME FAILED
           <$ATC_EXTERNAL_URL/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|View build details>
 
-- name: console-yz
+- name: console-g
   serial: true
   plan:
   - do:
     - aggregate:
       - get: ci
-        passed: [console-dg]
+        trigger: true
       - get: src
-        passed: [console-dg]
-    - task: run-tests
-      file: ci/ci/tests.yml
+        trigger: true
+    - task: build
+      file: ci/ci/build.yml
+      output_mapping: {build: g-build}
+      params:
+        ENV_DOMAIN: g.cld.gov.au
+    - put: g-cf
+      params:
+        manifest: g-build/manifest.yml
+        path: g-build
+        current_app_name: console
+        show_app_log: true
+    on_success:
+      put: slack
+      params:
+        text: |
+          :white_check_mark: $BUILD_JOB_NAME SUCCESS
+          <$ATC_EXTERNAL_URL/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|View build details>
+    on_failure:
+      put: slack
+      params:
+        text: |
+          :x: $BUILD_JOB_NAME FAILED
+          <$ATC_EXTERNAL_URL/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|View build details>
+
+- name: console-y
+  serial: true
+  plan:
+  - do:
     - aggregate:
-      - do:
-        - task: prepare-manifest
-          file: ci/ci/prepare-manifest.yml
-          output_mapping: {result: y-manifest}
-          params:
-            DOMAIN: system.y.cld.gov.au
-        - put: y-cf
-          params:
-            manifest: y-manifest/manifest.yml
-            path: build
-            current_app_name: console
-            show_app_log: true
-      - do:
-        - task: prepare-manifest
-          file: ci/ci/prepare-manifest.yml
-          output_mapping: {result: z-manifest}
-          params:
-            DOMAIN: system.z.cld.gov.au
-        - put: z-cf
-          params:
-            manifest: z-manifest/manifest.yml
-            path: build
-            current_app_name: console
-            show_app_log: true
+      - get: ci
+        passed: [console-d]
+      - get: src
+        passed: [console-d]
+    - task: build
+      file: ci/ci/build.yml
+      output_mapping: {build: y-build}
+      params:
+        ENV_DOMAIN: y.cld.gov.au
+    - put: y-cf
+      params:
+        manifest: y-build/manifest.yml
+        path: y-build
+        current_app_name: console
+        show_app_log: true
+    on_success:
+      put: slack
+      params:
+        text: |
+          :white_check_mark: $BUILD_JOB_NAME SUCCESS
+          <$ATC_EXTERNAL_URL/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|View build details>
+    on_failure:
+      put: slack
+      params:
+        text: |
+          :x: $BUILD_JOB_NAME FAILED
+          <$ATC_EXTERNAL_URL/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|View build details>
+
+- name: console-z
+  serial: true
+  plan:
+  - do:
+    - aggregate:
+      - get: ci
+        passed: [console-d]
+      - get: src
+        passed: [console-d]
+    - task: build
+      file: ci/ci/build.yml
+      output_mapping: {build: z-build}
+      params:
+        ENV_DOMAIN: z.cld.gov.au
+    - put: z-cf
+      params:
+        manifest: z-build/manifest.yml
+        path: z-build
+        current_app_name: console
+        show_app_log: true
     on_success:
       put: slack
       params:
@@ -104,20 +139,18 @@ jobs:
   - do:
     - aggregate:
       - get: ci
-        passed: [console-yz]
+        passed: [console-y]
       - get: src
-        passed: [console-yz]
-    - task: run-tests
-      file: ci/ci/tests.yml
-    - task: prepare-manifest
-      file: ci/ci/prepare-manifest.yml
-      output_mapping: {result: b-manifest}
+        passed: [console-y]
+    - task: build
+      file: ci/ci/build.yml
+      output_mapping: {build: b-build}
       params:
-        DOMAIN: system.b.cld.gov.au
+        ENV_DOMAIN: b.cld.gov.au
     - put: b-cf
       params:
-        manifest: b-manifest/manifest.yml
-        path: build
+        manifest: b-build/manifest.yml
+        path: b-build
         current_app_name: console
         show_app_log: true
     on_success:

@@ -3,6 +3,8 @@
 set -e
 set -x
 
+echo "Env domain: ${ENV_DOMAIN}"
+
 ORIG_PWD="${PWD}"
 
 # Create our own GOPATH
@@ -63,4 +65,4 @@ cp -R "${ORIG_PWD}/src/static" "${ORIG_PWD}/build/static"
 cp -R "${ORIG_PWD}/ci/skin/templates" "${ORIG_PWD}/build/templates"
 cp "${ORIG_PWD}/src/cg-dashboard" "${ORIG_PWD}/build/cg-dashboard"
 cp "${ORIG_PWD}/ci/ci/govau-Procfile" "${ORIG_PWD}/build/Procfile"
-cp "${ORIG_PWD}/ci/ci/govau-manifest.yml" "${ORIG_PWD}/build/manifest-template.yml"
+printf "\ndomain: system.${ENV_DOMAIN}\n" | cat "${ORIG_PWD}/ci/ci/govau-manifest.yml" - > "${ORIG_PWD}/build/manifest.yml"

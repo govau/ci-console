@@ -23,5 +23,8 @@ caches:
 - path: src/node_modules
 - path: ci/skin/node_modules
 
+params:
+  ENV_DOMAIN:
+
 run:
   path: ci/ci/test.sh
