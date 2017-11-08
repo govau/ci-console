@@ -27,4 +27,4 @@ params:
   ENV_DOMAIN:
 
 run:
-  path: ci/ci/test.sh
+  path: ci/ci/build.sh
