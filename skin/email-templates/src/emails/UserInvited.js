@@ -33,7 +33,7 @@ const HTML = () => {
         </P>
       </TextBlock>
       <Hr />
-      <ButtonBlock href={Value(".URL")}>Accept your invitation</ButtonBlock>
+      <ButtonBlock href={Value(".Link")}>Accept your invitation</ButtonBlock>
       <TextBlock>
         <P>
           <A href="https://cloud.gov.au">cloud.gov.au</A> is a service by the
@@ -42,16 +42,16 @@ const HTML = () => {
         </P>
         <P>
           <Strong>Accept the invitation</Strong> -{" "}
-          <A href={Value(".URL")}>Accept your invite [1]</A> to continue the
+          <A href={Value(".Link")}>Accept your invite [1]</A> to continue the
           registration process. You can also copy the URL below and paste it
           into your browser’s address bar:
         </P>
         <P>
-          <A href={Value(".URL")}>{Value(".URL")}</A>
+          <A href={Value(".Link")}>{Value(".Link")}</A>
         </P>
         <P>
           <Strong>Read the documentation</Strong> - After you{" "}
-          <A href="{{.URL}}">register [2]</A> and{" "}
+          <A href="{{.Link}}">register [2]</A> and{" "}
           <A href="https://console.cloud.gov.au/">log in [3]</A>, review the{" "}
           <A href="https://docs.cloud.gov.au">read the cloud.gov.au docs [4]</A>.
         </P>
@@ -91,7 +91,7 @@ Accept the invitation - Accept your invite [1] to continue the
 registration process. You can also copy the URL below and paste it
 into your browser’s address bar:
 
-{{.URL}}
+{{.Link}}
 
 Read the documentation - After you register [2] and log in [3], read
 the cloud.gov.au docs [4].
@@ -106,8 +106,8 @@ The cloud.gov.au team
 
 Need help [6]? We’d love to hear from you.
 
-[1] Accept your invite: {{.URL}}
-[2] Register: {{.URL}}
+[1] Accept your invite: {{.Link}}
+[2] Register: {{.Link}}
 [3] Log in: https://console.cloud.gov.au
 [4] Docs: https://docs.cloud.gov.au
 [5] Set up your cloud.gov access and get started: https://docs.cloud.gov.au/getting_started/login/
