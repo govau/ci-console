@@ -16,7 +16,7 @@ ln -s "${ORIG_PWD}/src" "${GOPATH}/src/github.com/18F/cg-dashboard"
 cd "${GOPATH}/src/github.com/18F/cg-dashboard"
 
 # Cache glide deps
-export GLIDE_HOME="${ORIG_PWD}/src/.glide_cache"
+export GLIDE_HOME="${ORIG_PWD}/src/.glide_cache_v2"
 mkdir -p "${GLIDE_HOME}"
 
 # Install go deps
