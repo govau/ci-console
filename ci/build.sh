@@ -20,7 +20,7 @@ export GLIDE_HOME="${ORIG_PWD}/src/.glide_cache"
 mkdir -p "${GLIDE_HOME}"
 
 # Install go deps
-glide install
+glide install --force
 
 # Build the thing
 go build
