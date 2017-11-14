@@ -16,7 +16,7 @@ outputs:
 
 caches:
 - path: src/.npm_cache
-- path: src/.glide_cache_v2
+- path: src/.glide_cache
 - path: ci/skin/.yarn_cache
 
 # We'll be a bit naughty and cache the following as well
