@@ -8,6 +8,8 @@ export { default as header } from "./header";
 
 export const lang = "en-AU";
 
+const envDomain = process.env.ENV_DOMAIN;
+
 export const config = {
   header: {
     disclaimer_link_text: "Here’s how you know",
@@ -85,10 +87,10 @@ export const config = {
   },
   platform: {
     name: "cloud.gov.au",
-    api_host: "api.system.g.cld.gov.au",
+    api_host: `api.system.${envDomain}`,
     logs: {
-      name: "logs.g.cld.gov.au",
-      url: "https://logs.g.cld.gov.au"
+      name: `logs.${envDomain}`,
+      url: `https://logs.${envDomain}`
     }
   }
 };
