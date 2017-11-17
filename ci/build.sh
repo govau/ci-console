@@ -15,12 +15,8 @@ mkdir -p "${GOPATH}/src/github.com/18F"
 ln -s "${ORIG_PWD}/src" "${GOPATH}/src/github.com/18F/cg-dashboard"
 cd "${GOPATH}/src/github.com/18F/cg-dashboard"
 
-# Cache glide deps
-export GLIDE_HOME="${ORIG_PWD}/src/.glide_cache"
-mkdir -p "${GLIDE_HOME}"
-
 # Install go deps
-glide install --force
+dep ensure
 
 # Build the thing
 go build
