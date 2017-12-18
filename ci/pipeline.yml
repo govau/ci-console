@@ -100,39 +100,6 @@ jobs:
           :x: $BUILD_JOB_NAME FAILED
           <$ATC_EXTERNAL_URL/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|View build details>
 
-- name: console-z
-  serial: true
-  plan:
-  - do:
-    - aggregate:
-      - get: ci
-        passed: [console-d]
-      - get: src
-        passed: [console-d]
-    - task: build
-      file: ci/ci/build.yml
-      output_mapping: {build: z-build}
-      params:
-        ENV_DOMAIN: z.cld.gov.au
-    - put: z-cf
-      params:
-        manifest: z-build/manifest.yml
-        path: z-build
-        current_app_name: console
-        show_app_log: true
-    on_success:
-      put: slack
-      params:
-        text: |
-          :white_check_mark: $BUILD_JOB_NAME SUCCESS
-          <$ATC_EXTERNAL_URL/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|View build details>
-    on_failure:
-      put: slack
-      params:
-        text: |
-          :x: $BUILD_JOB_NAME FAILED
-          <$ATC_EXTERNAL_URL/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME|View build details>
-
 - name: console-b
   serial: true
   plan:
@@ -218,15 +185,6 @@ resources:
     api: https://api.system.y.cld.gov.au
     username: ci-system-console
     password: ((y-password))
-    organization: system
-    space: console
-
-- name: z-cf
-  type: govau-cf
-  source:
-    api: https://api.system.z.cld.gov.au
-    username: ci-system-console
-    password: ((z-password))
     organization: system
     space: console
 
