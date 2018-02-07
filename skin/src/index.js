@@ -91,6 +91,10 @@ export const config = {
     logs: {
       name: `logs.${envDomain}`,
       url: `https://logs.${envDomain}`
+    },
+    grafana: {
+      name: `Experimental: view system state`,
+      url: `https://grafana.system.${envDomain}`
     }
   }
 };
