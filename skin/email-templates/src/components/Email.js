@@ -155,8 +155,8 @@ const Email = ({ children, subject, previewText }) => {
                         <tr>
                           <Preheader valign="top">
                             <ImageBlock
-                              src="https://www.dta.gov.au/images/logo_dta_inline.png"
-                              alt="cloud.gov.au"
+                              src="https://cloud.gov.au/console-email-assets/aus-gov-dta-wordmark.png"
+                              alt="Australian Government Digital Transformation Agency"
                               width={250}
                               maxWidth="500px"
                               link={{ href: "https://cloud.gov.au" }}
@@ -172,8 +172,8 @@ const Email = ({ children, subject, previewText }) => {
                         <tr>
                           <Footer valign="top">
                             <ImageBlock
-                              src="https://www.dta.gov.au/images/logo_dta_inline.png"
-                              alt="www.dta.gov.au"
+                              src="https://cloud.gov.au/console-email-assets/aus-gov-dta-wordmark.png"
+                              alt="Australian Government Digital Transformation Agency"
                               width={250}
                               maxWidth="500px"
                               link={{ href: "https://cloud.gov.au" }}
